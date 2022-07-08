@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>聯絡本_課程名稱</title>
+
+    <link rel="stylesheet" type="text/css" href="./js/semantic/css/semantic.min.css">
+    <link rel="stylesheet" href="./css/contactBookDesc.css">
+
+    <script src="./js/jquery-3.6.0.min.js"></script>
+    <script src="./js/semantic/js/semantic.min.js"></script>
+    <script src="./js/all.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="ui fluid flex-content" style="height:100%;">
+            <h1 class="title">聯絡本_課程名稱</h1>
+            <div class="iconPostion">
+                <div class="icon" onclick="history.back()"><i class="angle left icon"></i></div>
+                <div class="icon"></div>
+            </div>
+        </div>
+    </header>
+
+    <main class="contactBookDesc">
+        <section class="main-container coursePostion">
+            <div class="ui fluid courseInfo courseHeader">
+                <div class="courseTime">時間<span>2022/00/00 00:00-00:00</span></div>
+                <div class="course">單元<span>Lesson One</span></div>
+                <div class="course">簽核人<span>尚未簽核</span></div>
+            </div>
+
+            <div class="ui fluid contactSelectBtn">
+                <div class="ui form raised segment large">
+                    <div class="field">
+                        <label>學生(可多選)</label>
+                        <select class="ui fluid search dropdown" multiple="">
+                            <option value="classId1" selected>全部學生</option>
+                            <option value="classId2">學生姓名2</option>
+                            <option value="classId3">學生姓名3</option>
+                            <option value="classId4">學生姓名4</option>
+                            <option value="classId5">學生姓名5</option>
+                            <option value="classId6">學生姓名6</option>
+                            <option value="classId7">學生姓名7</option>
+                            <option value="classId8">學生姓名8</option>
+                            <option value="classId9">學生姓名9</option>
+                            <option value="classId10">學生姓名10</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="ui fluid contactContent">
+                <h2>聯絡內容</h2>
+
+                <div class="ui vertical segment descCard radioBlock">
+                    <div class="ui form">
+                        <div class="grouped fields">
+                            <h3>單選題</h3>
+
+                            <div class="field">
+                                <div class="ui radio checkbox">
+                                    <input type="radio" name="radio1" id="radio1-1" value="">
+                                    <label for="radio1-1">單選選項1單選選項1單選選項1單選選項1</label>
+                                </div>
+                            </div>
+                            <div class="field">
+                                <div class="ui radio checkbox">
+                                    <input type="radio" name="radio1" id="radio1-2" value="">
+                                    <label for="radio1-2">單選選項2</label>
+                                </div>
+                            </div>
+                            <div class="field">
+                                <div class="ui radio checkbox">
+                                    <input type="radio" name="radio1" id="radio1-3" value="">
+                                    <label for="radio1-3">單選選項3</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="ui vertical segment descCard checkBlock">
+                    <div class="ui form">
+                        <div class="grouped fields">
+                            <h3>多選題</h3>
+
+                            <div class="field">
+                                <div class="ui checkbox">
+                                    <input type="checkbox" name="checkbox1" id="checkbox1-1" value="">
+                                    <label for="checkbox1-1">多選選項1多選選項1多選選項1多選選項1</label>
+                                </div>
+                            </div>
+                            <div class="field">
+                                <div class="ui checkbox">
+                                    <input type="checkbox" name="checkbox1" id="checkbox1-2" value="">
+                                    <label for="checkbox1-2">多選選項2</label>
+                                </div>
+                            </div>
+                            <div class="field">
+                                <div class="ui checkbox">
+                                    <input type="checkbox" name="checkbox1" id="checkbox1-3" value="">
+                                    <label for="checkbox1-3">多選選項3</label>
+                                </div>
+                            </div>
+                            <div class="field">
+                                <div class="ui checkbox">
+                                    <input type="checkbox" name="checkbox1" id="checkbox1-4" value="">
+                                    <label for="checkbox1-4">多選選項4</label>
+                                </div>
+                            </div>
+                            <div class="field">
+                                <div class="ui checkbox">
+                                    <input type="checkbox" name="checkbox1" id="checkbox1-5" value="">
+                                    <label for="checkbox1-5">多選選項5</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="ui vertical segment descCard inputBlock">
+                    <div class="ui form">
+                        <div class="grouped fields">
+                            <h3>單欄輸入框</h3>
+                            <div class="field">
+                                <div class="ui fluid input">
+                                    <input placeholder="請輸入內容" type="text">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="ui vertical segment descCard textareaBlock">
+                    <div class="ui form">
+                        <div class="grouped fields">
+                            <h3>多欄輸入框</h3>
+                            <div class="field">
+                                <textarea rows="3" placeholder="請輸入內容"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ui items">
+                    <div class="item">
+                        <button class="ui fluid button primary big" type="submit">送出簽核</button>
+                    </div>
+
+                    <div class="field">
+                        <div class="ui checkbox">
+                            <input type="checkbox" name="checkbox-remind" id="checkbox-remind" value="">
+                            <label for="checkbox-remind">發送訊息</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>

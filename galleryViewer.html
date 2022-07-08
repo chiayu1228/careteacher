@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>相簿名稱CCC</title>
+
+    <link rel="stylesheet" type="text/css" href="./js/semantic/css/semantic.min.css">
+    <link rel="stylesheet" href="./js/swiper/css/swiper.min.css">
+    <link rel="stylesheet" href="./css/galleryViewer.css">
+
+    <script src="./js/jquery-3.6.0.min.js"></script>
+    <script src="./js/semantic/js/semantic.min.js"></script>
+    <script src="./js/swiper/js/swiper.min.js"></script>
+    <script src="./js/all.js"></script>
+</head>
+</head>
+
+<body style="overflow:hidden;">
+    <header>
+        <div class="ui fluid flex-content" style="height:100%;">
+            <h1 class="title">相簿名稱CCC</h1>
+            <div class="iconPostion">
+                <div class="icon" onclick="history.back()"><i class="angle left icon"></i></div>
+                <div class="icon"><i class="pencil alternate icon"></i></div>
+            </div>
+        </div>
+    </header>
+
+    <main class="galleryViewer">
+        <section class="main-container">
+            <div class="ui three column grid fluid photoList">
+                <div class="column photo">
+                    <button type="button" class="add">
+                        <i class="large plus icon"></i>
+                    </button>
+                </div>
+                <div class="column photo">
+                    <img src="./img/img_null.png">
+                </div>
+                <div class="column photo">
+                    <img src="./img/img_null.png">
+                </div>
+                <div class="column photo">
+                    <img src="./img/img_null.png">
+                </div>
+                <div class="column photo">
+                    <img src="./img/img_null.png">
+                </div>
+
+                <div class="column photo">
+                    <img src="./img/img_null.png">
+                </div>
+                <div class="column photo">
+                    <img src="./img/img_null.png">
+                </div>
+                <div class="column photo">
+                    <img src="./img/img_null.png">
+                </div>
+                <div class="column photo">
+                    <img src="./img/img_null.png">
+                </div>
+                <div class="column photo">
+                    <img src="./img/img_null.png">
+                </div>
+                <div class="column photo">
+                    <img src="./img/img_null.png">
+                </div>
+                <div class="column photo">
+                    <img src="./img/img_null.png">
+                </div>
+                <div class="column photo">
+                    <img src="./img/img_null.png">
+                </div>
+                <div class="column photo">
+                    <img src="./img/img_null.png">
+                </div>
+                <div class="column photo">
+                    <img src="./img/img_null.png">
+                </div>
+                <div class="column photo">
+                    <img src="./img/img_null.png">
+                </div>
+                <div class="column photo">
+                    <img src="./img/img_null.png">
+                </div>
+                <div class="column photo">
+                    <img src="./img/img_null.png">
+                </div>
+                <div class="column photo">
+                    <img src="./img/img_null.png">
+                </div>
+                <div class="column photo">
+                    <img src="./img/img_null.png">
+                </div>
+            </div>
+
+            <!-- Loading Modal -->
+            <div class="modal loadingModal" style="display:none;">
+                <div class="modalPostion">
+                    <i class="huge spinner loading icon"></i>
+                    <div>照片上傳中...</div>
+                </div>
+            </div>
+            <!-- Loading Modal -->
+
+            <!-- Photo Modal -->
+            <div class="modal galleryModal" style="display:none;">
+                <div class="modalContent">
+                    <div class="header">
+                        <h2 class="swiper-pagination"></h2>
+                        <div class="iconPostion">
+                            <div class="icon backView"><i class="angle left icon"></i></div>
+                            <div class="icon"><i class="trash alternate icon"></i></div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img
+                                    src="https://www.careapp.live/files/w1_album/2018030714491982773_16285659400795_img2.jpeg">
+                                <div class="iconDownload"><i class="download icon"></i></div>
+                            </div>
+                            <div class="swiper-slide">
+                                <img
+                                    src="https://www.careapp.live/files/w1_album/2018030714491982773_16285659400795_img4.png">
+                                <div class="iconDownload"><i class="download icon"></i></div>
+                            </div>
+                            <!-- <div class="swiper-slide"></div>
+                                <div class="swiper-slide"></div>
+                                <div class="swiper-slide"></div>
+                                <div class="swiper-slide"></div>
+                                <div class="swiper-slide"></div>
+                                <div class="swiper-slide"></div>
+                                <div class="swiper-slide"></div>
+                                <div class="swiper-slide"></div> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Photo Modal -->
+
+            <!-- Edit Modal -->
+            <div class="modal editModal" style="z-index:2; display:none;">
+                <div class="modalPostion">
+                    <div class="modalContent">
+                        <div class="contentBlock">
+                            <h2 style="text-align:center;">編輯相簿</h2>
+                            <div>
+                                <div class="ui form large">
+
+                                    <div class="field">
+                                        <label>相簿名稱</label>
+                                        <div class="ui fluid input">
+                                            <input placeholder="請輸入相簿名稱" type="text">
+                                        </div>
+                                    </div>
+
+                                    <div class="field">
+                                        <label>建立日期</label>
+                                        <div class="ui fluid input">
+                                            <input placeholder="請選擇日期" type="date" id="today">
+                                        </div>
+                                    </div>
+
+                                    <div class="field">
+                                        <label>發布班級(可多選)</label>
+                                        <select class="ui fluid search dropdown" multiple="">
+                                            <option value="" disabled>請選擇班級</option>
+                                            <option value="classId1">班級1</option>
+                                            <option value="classId2">班級2</option>
+                                            <option value="classId3">班級3</option>
+                                            <option value="classId4">班級4</option>
+                                            <option value="classId5">班級5</option>
+                                            <option value="classId6">班級6</option>
+                                            <option value="classId7">班級7</option>
+                                            <option value="classId8">班級8</option>
+                                            <option value="classId9">班級9</option>
+                                            <option value="classId10">班級10</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="field">
+                                        <label>封面圖片</label>
+                                        <div class="ui fluid icon input">
+                                            <input type="file" (change)="fileEvent($event)" class="inputfile"
+                                                id="embedpollfileinput" />
+                                            <i class="upload icon"></i>
+                                        </div>
+                                    </div>
+
+                                    <div class="inline fields">
+                                        <label> 上架</label>
+                                        <div class="field">
+                                            <div class="ui radio checkbox">
+                                                <input type="radio" name="shelf" value="yes" checked="checked">
+                                                <label>是</label>
+                                            </div>
+                                        </div>
+                                        <div class="field">
+                                            <div class="ui radio checkbox">
+                                                <input type="radio" name="shelf" value="no">
+                                                <label>否</label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="btnBlock-sticky">
+                            <div class="btnBlock btnTwo">
+                                <button type="cancel" class="cancel">取消</button>
+                                <button type="button" class="confirm">確定</button>
+                            </div>
+                            <div class="btnBlock">
+                                <button type="button" class="delete">刪除</button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!-- Edit Modal -->
+
+            <!-- Delete Modal -->
+            <div class="modal deleteModal" style="display:none; z-index:11;">
+                <div class="modalPostion small">
+                    <div class="modalContent">
+                        <div class="contentBlock" style="text-align:center;">
+                            確定要刪除所選項目？
+                        </div>
+
+                        <div class="btnBlock-sticky">
+                            <div class="btnBlock btnTwo">
+                                <button type="cancel" class="cancel">取消</button>
+                                <button type="button" class="confirm">確定</button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!-- Delete Modal -->
+        </section>
+    </main>
+</body>
+
+</html>

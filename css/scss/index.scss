@@ -1,0 +1,85 @@
+@import "style";
+
+//+ index 功能選單
+.index .info {
+    @include minor-block;
+    display: flex;
+    align-items: center;
+    height: 120px;
+    background: $color-minor;
+    box-shadow: 0 0 10px 2px #bababf;
+    position: sticky;
+    top: $header-height;
+    z-index: 1;
+
+    .img {
+        width: 60px;
+        height: 60px;
+        border-radius: 100%;
+        overflow: hidden;
+        box-shadow: 0 0 10px 0px #bababf;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+    }
+}
+
+
+.index .info .content {
+    @include minor-block;
+    padding-right: 0;
+    line-height: 2rem;
+
+    .title {
+        font-size: 1.5rem;
+        font-weight: 600;
+    }
+
+    .meta {
+        font-size: 1.2rem;
+        color: $gray-minor;
+    }
+}
+
+.index .iconList {
+    @include minor-block;
+    margin: 0;
+    width: 100%;
+    @include overflowList;
+    max-height: calc(100% - 120px);
+    color: $color-main;
+
+    .column.function {
+        @include flex-content;
+        flex-direction: column;
+        padding: 1vh 0;
+        margin-bottom: 2vh;
+        cursor: pointer;
+    }
+
+    .icon {
+        height: 6vh;
+        margin-bottom: 2vh;
+        padding: 0 1.5rem;
+
+        svg {
+            width: 100%;
+            height: 100%;
+            fill: $color-main;
+        }
+    }
+
+    .title {
+        font-size: 1.1rem;
+        text-align: center;
+        font-weight: 600;
+        line-height: 1;
+        color: #1dade5;
+    }
+}
+
+//- index 功能選單

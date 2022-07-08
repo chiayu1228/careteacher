@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>登入頁</title>
+
+    <link rel="stylesheet" type="text/css" href="./js/semantic/css/semantic.min.css">
+    <link rel="stylesheet" href="./css/login.css">
+
+    <script src="./js/jquery-3.6.0.min.js"></script>
+    <script src="./js/semantic/js/semantic.min.js"></script>
+    <script src="./js/all.js"></script>
+</head>
+
+<body>
+    <!-- <header>頭部</header> -->
+    <main class="login">
+        <section class="main-container flex-content">
+            <form style="width:100%;">
+                <div class="ui items flex-content" style="flex-wrap:wrap;">
+                    <img class="item" style="width:50%;" src="./img/logo_w.svg">
+                    <div style="width:100%; text-align:center;">教師版</div>
+                </div>
+
+                <div class="ui form raised segment large">
+                    <div class="field">
+                        <label>學校</label>
+                        <select class="ui fluid search dropdown">
+                            <option value="" selected disabled>請選擇學校</option>
+                            <option value="groupId1">學校名稱1</option>
+                            <option value="groupId2">學校名稱2</option>
+                            <option value="groupId3">學校名稱3</option>
+                            <option value="groupId4">學校名稱4</option>
+                            <option value="groupId5">學校名稱5</option>
+                            <option value="groupId6">學校名稱6</option>
+                            <option value="groupId7">學校名稱7</option>
+                            <option value="groupId8">學校名稱8</option>
+                            <option value="groupId9">學校名稱9</option>
+                            <option value="groupId10">學校名稱10</option>
+                        </select>
+                    </div>
+
+                    <div class="field">
+                        <label>帳號</label>
+                        <div class="ui fluid icon input">
+                            <input placeholder="請輸入帳號" type="text">
+                            <i class="user icon"></i>
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <label>密碼</label>
+                        <div class="ui fluid icon input">
+                            <input placeholder="請輸入密碼" type="password">
+                            <i class="lock icon"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ui items">
+                    <div class="item">
+                        <button class="ui fluid button primary big" type="button" onclick="location.href='./index.html'">登入</button>
+                    </div>
+                    <!-- <div class="item">
+                        <button class="ui fluid button large" type="button">忘記密碼</button>
+                    </div> -->
+                </div>
+            </form>
+            
+        </section>
+    </main>
+    <!-- <footer>底部</footer> -->
+</body>
+
+</html>

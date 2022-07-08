@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>點名_課程名稱</title>
+
+    <link rel="stylesheet" type="text/css" href="./js/semantic/css/semantic.min.css">
+    <link rel="stylesheet" href="./css/rollCallDesc.css">
+
+
+    <script src="./js/jquery-3.6.0.min.js"></script>
+    <script src="./js/semantic/js/semantic.min.js"></script>
+    <script src="./js/all.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="ui fluid flex-content" style="height:100%;">
+            <h1 class="title">點名_課程名稱</h1>
+            <div class="iconPostion">
+                <div class="icon" onclick="history.back()"><i class="angle left icon"></i></div>
+                <div class="icon"></div>
+            </div>
+        </div>
+    </header>
+
+    <main class="rollCallDesc">
+        <section class="main-container coursePostion">
+            <div class="ui fluid courseInfo courseHeader">
+                <div class="courseTime">時間<span>2022/00/00 00:00-00:00</span></div>
+                <div class="courseLocation">教室<span>A001</span></div>
+                <div class="courseTeacher">老師<span>XXXXX</span></div>
+
+                <!-- <div class="courseStatus">
+                    <span>
+                        00<br>
+                        <span>應到</span>
+                    </span>
+                    <span>
+                        00<br>
+                        <span>出席</span>
+                    </span>
+                    <span>
+                        00<br>
+                        <span>遲到</span>
+                    </span>
+                    <span>
+                        00<br>
+                        <span>缺席</span>
+                    </span>
+                    <span>
+                        00<br>
+                        <span>請假</span>
+                    </span>
+                    <span>
+                        00<br>
+                        <span>外出</span>
+                    </span>
+                    <span>
+                        00<br>
+                        <span>未點名</span>
+                    </span>
+                </div> -->
+            </div>
+
+            <div class="ui fluid courseStatusBtn">
+                <button class="" style="background:#1a6160; color:#FFF;" type="button">出席<br>00</button>
+                <button class="" style="background:#FFFF00;" type="button">遲到<br>00</button>
+                <button class="" style="background:#DE4949; color:#FFF;" type="button">缺席<br>00</button>
+                <button class="" style="background:#ED37C6; color:#FFF;" type="button">請假<br>00</button>
+                <button class="" style="background:#625199; color:#FFF;" type="button">外出<br>00</button>
+            </div>
+
+            <div class="ui fluid courseStList">
+                <!-- <div class="courseSt">
+                    <button type="button">
+                        <div class="info">未刷卡</div>
+                        <div class="stName">
+                            <div class="title">學生1</div>
+                            <div class="title">英文名字</div>
+                            <div class="subTitle">學號</div>
+                        </div>
+                    </button>
+                </div> -->
+
+                <div class="courseSt">
+                    <div class="stInfo">
+                        <h2 class="stName">學生1
+                            <span class="stNameEN">(英文名字)</span>
+                        </h2>
+                        <div class="stNo">123456789</div>
+                    </div>
+                    <div class="stStatus status1">出席</div>
+                    <div class="arrow"><i class="large angle right icon"></i></div>
+                </div>
+                <div class="courseSt">
+                    <div class="stInfo">
+                        <h2 class="stName">學生1
+                            <span class="stNameEN">(英文名字)</span>
+                        </h2>
+                        <div class="stNo">123456789</div>
+                    </div>
+                    <div class="stStatus status2">遲到</div>
+                    <div class="arrow"><i class="large angle right icon"></i></div>
+                </div>
+                <div class="courseSt">
+                    <div class="stInfo">
+                        <h2 class="stName">學生1
+                            <span class="stNameEN">(英文名字)</span>
+                        </h2>
+                        <div class="stNo">123456789</div>
+                    </div>
+                    <div class="stStatus status3">缺席</div>
+                    <div class="arrow"><i class="large angle right icon"></i></div>
+                </div>
+                <div class="courseSt">
+                    <div class="stInfo">
+                        <h2 class="stName">學生1
+                            <span class="stNameEN">(英文名字)</span>
+                        </h2>
+                        <div class="stNo">123456789</div>
+                    </div>
+                    <div class="stStatus status4">請假</div>
+                    <div class="arrow"><i class="large angle right icon"></i></div>
+                </div>
+                <div class="courseSt">
+                    <div class="stInfo">
+                        <h2 class="stName">學生1
+                            <span class="stNameEN">(英文名字)</span>
+                        </h2>
+                        <div class="stNo">123456789</div>
+                    </div>
+                    <div class="stStatus status5">外出</div>
+                    <div class="arrow"><i class="large angle right icon"></i></div>
+                </div>
+
+                <div class="courseSt">
+                    <div class="stInfo">
+                        <h2 class="stName">學生1
+                            <span class="stNameEN">(英文名字)</span>
+                        </h2>
+                        <div class="stNo">123456789</div>
+                    </div>
+                    <div class="stStatus">未刷卡</div>
+                    <div class="arrow"><i class="large angle right icon"></i></div>
+                </div>
+                <div class="courseSt">
+                    <div class="stInfo">
+                        <h2 class="stName">學生1
+                            <span class="stNameEN">(英文名字)</span>
+                        </h2>
+                        <div class="stNo">123456789</div>
+                    </div>
+                    <div class="stStatus">未刷卡</div>
+                    <div class="arrow"><i class="large angle right icon"></i></div>
+                </div>
+                <div class="courseSt">
+                    <div class="stInfo">
+                        <h2 class="stName">學生1
+                            <span class="stNameEN">(英文名字)</span>
+                        </h2>
+                        <div class="stNo">123456789</div>
+                    </div>
+                    <div class="stStatus">未刷卡</div>
+                    <div class="arrow"><i class="large angle right icon"></i></div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Leave Modal -->
+        <div class="modal leaveModal" style="z-index:2; display:none;">
+            <div class="modalPostion">
+                <div class="modalContent">
+                    <div class="contentBlock">
+                        <h2 style="text-align:center;">請假單</h2>
+                        <div class="ui fluid courseInfo">
+                            <!-- <div class="appTime">申請日期<span>2022/00/00 00:00-00:00</span></div> -->
+                            <div class="leaveTime">請假日期<span>2022/00/00 00:00-00:00</span></div>
+                            <div class="student">學生<span>學生姓名00</span></div>
+                            <div class="course">課程<span>課程名稱00</span></div>                        </div>
+                        <div>
+                            <div class="ui form large">
+                                <div class="field">
+                                    <label>補課課程</label>
+                                    <select class="ui fluid search dropdown">
+                                        <option value="" selected disabled>請選擇課程</option>
+                                        <option value="courseId1">課程名稱1</option>
+                                        <option value="courseId2">課程名稱2</option>
+                                        <option value="courseId3">課程名稱3</option>
+                                        <option value="courseId4">課程名稱4</option>
+                                        <option value="courseId5">課程名稱5</option>
+                                        <option value="courseId6">課程名稱6</option>
+                                    </select>
+                                </div>
+
+                                <div class="field">
+                                    <label>補課日期</label>
+                                    <div class="ui fluid input">
+                                        <input placeholder="請選擇日期" type="date" id="today">
+                                    </div>
+                                </div>
+
+                                <div class="field">
+                                    <label>假別</label>
+                                    <select class="ui fluid search dropdown">
+                                        <option value="" selected disabled>請選擇假別</option>
+                                        <option value="leaveId1">事假</option>
+                                        <option value="leaveId2">病假</option>
+                                        <option value="leaveId3">喪假</option>
+                                    </select>
+                                </div>
+
+                                <div class="field">
+                                    <label>請假事由</label>
+                                    <textarea rows="3"></textarea>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="btnBlock-sticky">
+                        <div class="btnBlock btnTwo">
+                            <button type="cancel" class="cancel">取消</button>
+                            <button type="button" class="confirm">確定</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- Leave Modal -->
+    </main>
+</body>
+
+<script>
+    $(function () {
+        $(".courseStatusBtn button").click(function () {
+            var $allBtn = $('.courseStatusBtn button')
+
+            $(this).addClass('active');
+            $allBtn.not(this).removeClass('active');
+        });
+    });
+
+    $(function () {
+        var tag1 = $(".stStatus.status4");
+        var button1 = $(tag1).parent(".courseSt");
+        var leaveModal = $(".leaveModal");
+        var cancel = $("button.cancel");
+
+        button1.on("click", function (e) {
+            leaveModal.show();
+            $("body").css("overflow", "hidden");
+
+            cancel.on("click", function (e) {
+                leaveModal.hide();
+                $("body").css("overflow", "auto");
+            });
+        });
+    });
+</script>
+
+</html>

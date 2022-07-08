@@ -1,0 +1,13 @@
+@import "style";
+
+.login {
+    @include overflowList;
+    padding: 0;
+}
+
+.login section {
+    background: #46bfe8;
+    color: #FFF;
+    padding: 4rem 1.5rem;
+    align-items: self-start;
+}

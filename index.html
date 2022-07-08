@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>功能選單</title>
+
+    <link rel="stylesheet" type="text/css" href="./js/semantic/css/semantic.min.css">
+    <link rel="stylesheet" href="./css/index.css">
+
+    <script src="./js/jquery-3.6.0.min.js"></script>
+    <script src="./js/semantic/js/semantic.min.js"></script>
+    <script src="./js/all.js"></script>
+</head>
+
+<body style="overflow:hidden;">
+    <header>
+        <div class="ui fluid flex-content" style="height:100%;">
+            <h1 class="title"><img style="height:24px;" src="./img/logo_w.svg"></h1>
+            <div class="iconPostion">
+                <div class="icon"></div>
+                <div class="icon notify"><i class="bell icon"></i></div>
+            </div>
+        </div>
+    </header>
+
+    <main class="index">
+        <section class="main-container hadFooter">
+            <div class="ui fluid info">
+                <div class="img">
+                    <img src="./img/avatar_null.svg" class="avatar">
+                </div>
+                <div class="content">
+                    <div class="title">老師姓名</div>
+                    <div class="meta">老師職稱</div>
+                </div>
+            </div>
+            <div class="ui four column grid fluid iconList">
+                <div class="column function" onclick="location.href='./rollCall.html'">
+                    <div class="icon"><img src="./img/function/icon_rollCall.svg"></div>
+                    <div class="title">點名</div>
+                </div>
+                <div class="column function" onclick="location.href='./classContent.html'">
+                    <div class="icon"><img src="./img/function/icon_classContent.svg"></div>
+                    <div class="title">上課內容</div>
+                </div>
+                <div class="column function" onclick="location.href='./contactBook.html'">
+                    <div class="icon"><img src="./img/function/icon_contactBook.svg"></div>
+                    <div class="title">聯絡本</div>
+                </div>
+                <div class="column function" onclick="location.href='./gallery.html'">
+                    <div class="icon"><img src="./img/function/icon_gallery.svg"></div>
+                    <div class="title">相簿</div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="ui five column grid fluid">
+            <div class="column function">
+                <!-- <div class="icon"><img src="./img/bar/icon_news.svg"></div>
+                <div class="title">動態消息</div> -->
+            </div>
+            <div class="column function">
+                <!-- <div class="icon"><img src="./img/bar/icon_talk.svg"></div>
+                <div class="title">對話</div> -->
+            </div>
+            <div class="column function">
+                <div class="logo"><img src="./img/bar/btn_main.svg"></div>
+            </div>
+            <div class="column function">
+                <!-- <div class="icon"><img src="./img/bar/icon_discover.svg"></div>
+                <div class="title">發現</div> -->
+            </div>
+            <div class="column function">
+                <!-- <div class="icon"><img src="./img/bar/icon_setting.svg"></div>
+                <div class="title">設定</div> -->
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

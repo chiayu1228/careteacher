@@ -1,0 +1,92 @@
+@import "style";
+
+//+ classContent 聯絡本
+.classContent .pickDay {
+    @include minor-block;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background: $color-minor;
+    position: sticky;
+    top: $header-height;
+    box-shadow: 0 0 10px 2px #bababf;
+
+    .date {
+        font-size: 1.5rem;
+        font-weight: 600;
+        height: 100%;
+        display: flex;
+        align-items: center;
+    }
+
+    .icon {
+        height: 100%;
+        cursor: pointer;
+        @include flex-content;
+    }
+}
+
+.classContent .courseList {
+    @include overflowList;
+    max-height: calc(100% - 70px);
+
+    .courseCard {
+        @include minor-block;
+        border-bottom: 1px solid #ccc;
+        cursor: pointer;
+
+        .courseName {
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+
+        .courseInfo {
+            @include minor-block;
+            color: $color-main;
+            line-height: 2rem;
+
+            div {
+                border-left: 6px solid $color-main;
+                padding-left: 10px;
+            }
+
+            span {
+                padding-left: 10px;
+            }
+        }
+
+        .coursePostion {
+            @include flex-content;
+            justify-content: space-between;
+        }
+
+        .courseStatus {
+            display: flex;
+            justify-content: flex-end;
+
+            span {
+                position: relative;
+                text-align: center;
+                font-size: 1.2rem;
+                padding: 0 3px;
+
+                &::after {
+                    content: "/";
+                    position: absolute;
+                    top: 35%;
+                    // right: 0;
+                }
+
+                &:last-of-type {
+                    &::after {
+                        content: "";
+                    }
+                }
+            }
+        }
+    }
+}
+
+//- classContent 聯絡本

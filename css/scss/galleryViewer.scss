@@ -1,0 +1,113 @@
+@import "style";
+
+//+ galleryViewer 相簿
+.galleryViewer .photoList {
+    margin: 0;
+    @include overflowList;
+}
+
+.galleryViewer .column.photo {
+    height: 120px;
+
+    @include mobile {
+        height: calc(100vw / 3);
+    }
+
+    img {
+        object-fit: cover;
+    }
+
+    .add {
+        width: 100%;
+        height: 100%;
+        color: $color-main;
+        border: 3px solid $color-main;
+        border-radius: $border-radius;
+
+        &:active {
+            transform: scale(.8);
+            // transform-origin: center;
+        }
+    }
+}
+
+//- galleryViewer 相簿
+
+//+ Photo Modal
+.galleryModal {
+
+    .modalContent {
+        width: 100%;
+        max-height: 100vh;
+        padding: 0;
+        background: #333;
+        position: relative;
+        border-radius: 0;
+    }
+
+    .header {
+        @include flex-content;
+        width: 100%;
+        height: 12vh;
+        color: #FFF;
+
+        .iconPostion {
+            @include flex-content;
+            width: 100%;
+            height: $header-height;
+            position: absolute;
+            top: 0;
+            display: flex;
+            justify-content: space-between;
+            padding: 0 8px;
+        }
+
+        .icon {
+            &:nth-of-type(odd) {
+                left: 0;
+            }
+
+            &:nth-of-type(even) {
+                right: 0;
+            }
+        }
+
+        .swiper-pagination {
+            width: 70vw;
+            position: unset;
+            pointer-events: none;
+            margin: 0;
+        }
+    }
+
+    .swiper-container {
+        @include flex-content;
+        width: 100%;
+        // margin-top: $header-height;
+        @include overflowList;
+
+        img {
+            // height: auto;
+            object-fit: contain;
+        }
+
+        .iconDownload {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            color: #FFF;
+            background: rgba(0, 0, 0, 0.6);
+            padding: 10px;
+
+            i {
+                margin: 0;
+            }
+        }
+    }
+
+    .swiper-wrapper {
+        overflow-x: unset;
+    }
+}
+
+//- Photo Modal

@@ -1,0 +1,188 @@
+@import "style";
+
+//+ rollCallDesc 點名
+.rollCallDesc .coursePostion {
+    @include overflowList;
+}
+
+.rollCallDesc .courseInfo {
+    color: $gray-minor;
+    border-left: 6px solid #1dade5;
+    padding-left: 10px;
+    margin-bottom: calc(#{$block-padding} * 2);
+    line-height: 2rem;
+
+    * {
+        font-size: 1.2rem;
+    }
+
+    &.courseHeader {
+        @include minor-block;
+        background: $color-minor;
+        box-shadow: 0 0 10px 2px #bababf;
+        border: 0;
+        margin-bottom: 0;
+    }
+
+    span {
+        color: $gray-main;
+        padding-left: 10px;
+    }
+
+    .courseStatus {
+        display: flex;
+        justify-content: space-between;
+        padding-top: $block-padding;
+
+        span {
+            position: relative;
+            text-align: center;
+            padding-left: 0;
+
+            &::after {
+                content: "/";
+                position: absolute;
+                top: 35%;
+                right: -35%;
+            }
+
+            &:last-of-type {
+                &::after {
+                    content: "";
+                }
+            }
+        }
+    }
+}
+
+.rollCallDesc .courseStatusBtn {
+    display: flex;
+    box-shadow: 0 0 10px 2px #bababf;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+
+    button {
+        width: calc(100% / 5);
+        height: 75px;
+        padding: 8px;
+        line-height: 1.2;
+
+        &.active {
+            border: 8px solid rgba(0, 0, 0, .2);
+        }
+    }
+}
+
+.rollCallDesc .courseStList {
+
+    .courseSt {
+        @include flex-content;
+        justify-content: space-between;
+        width: 100%;
+        height: 90px;
+        background-color: #fff;
+        cursor: pointer;
+        border-bottom: 1px solid #d6d6d6;
+        padding: 1rem;
+
+        .stInfo {
+            width: 70%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            .stName {
+                font-size: 1.5rem;
+                color: #6c6b6b;
+                margin: 0;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            }
+
+            .stNo {
+                font-size: 1rem;
+                color: #6c6b6b;
+            }
+        }
+
+        .stStatus {
+            padding: 2px 4px;
+            font-size: 1.2rem;
+
+            // 出席
+            &.status1 {
+                background: #1a6160;
+                color: #FFF;
+            }
+
+            // 遲到
+            &.status2 {
+                background: #FFFF00;
+            }
+
+            // 缺席
+            &.status3 {
+                background: #DE4949;
+                color: #FFF;
+            }
+
+            // 請假
+            &.status4 {
+                background: #ED37C6;
+                color: #FFF;
+            }
+
+            // 外出
+            &.status5 {
+                background: #625199;
+                color: #FFF;
+            }
+        }
+
+        .arrow {
+            color: #afafaf;
+        }
+
+        // width: calc(100% / 3);
+        // padding: 8px;
+        // padding-bottom: 0;
+
+        // button {
+        //     width: 100%;
+        //     height: 115px;
+        //     text-align: left;
+        //     background: #fff;
+        //     color: #000;
+        //     border: 1px solid #ccc;
+
+        //     .info {
+        //         padding: 4px 8px;
+        //         border-bottom: 1px solid #ccc;
+        //     }
+
+        //     .stName {
+        //         padding: 8px;
+
+        //         .title {
+        //             overflow: hidden;
+        //             text-overflow: ellipsis;
+        //             white-space: nowrap;
+        //         }
+
+        //         .subTitle {
+        //             color: #888;
+        //             font-size: 14px;
+
+        //             overflow: hidden;
+        //             text-overflow: ellipsis;
+        //             white-space: nowrap;
+        //         }
+        //     }
+        // }
+    }
+}
+
+//- rollCallDesc 點名

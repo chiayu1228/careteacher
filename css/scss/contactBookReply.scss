@@ -1,0 +1,70 @@
+@import "style";
+
+//+ contactBookReply 聯絡本
+.contactBookReply .coursePostion {
+    @include overflowList;
+}
+
+.contactBookReply .courseInfo {
+    color: $gray-minor;
+    border-left: 6px solid #1dade5;
+    padding-left: 10px;
+    margin-bottom: calc(#{$block-padding} * 2);
+    line-height: 2rem;
+
+    * {
+        font-size: 1.2rem;
+    }
+
+    &.courseHeader {
+        @include minor-block;
+        background: $color-minor;
+        box-shadow: 0 0 10px 2px #bababf;
+        border: 0;
+        margin-bottom: 0;
+    }
+
+    span {
+        color: $gray-main;
+        padding-left: 10px;
+    }
+}
+
+
+.contactBookReply .contactContent {
+    @include minor-block;
+
+    h2 {
+        color: $color-main;
+        font-size: 1.5rem;
+        margin: 0;
+    }
+
+    h3 {
+        color: $gray-third;
+    }
+
+    .replyCard {
+        padding: 1rem;
+
+        .replyTitle {
+            @include flex-content;
+            justify-content: space-between;
+            margin-bottom: 1rem;
+        }
+
+        .replyName {
+            margin: 0;
+
+            &::after {
+                content:" 的家長";
+            }
+        }
+
+        .replyContant {
+            line-height: $line-height;
+        }
+    }
+}
+
+//- contactBookReply 聯絡本
